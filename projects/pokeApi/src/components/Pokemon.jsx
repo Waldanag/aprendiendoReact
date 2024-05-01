@@ -9,7 +9,9 @@ const Pokemon = (pokemonName) => {
             return pokemonName.toLowerCase().trim()
         }
     }
-    const url = url_base + pokeName()
+
+    //como concatenar una url con un string ingresado por un form para formar una nueva url que se conecte con una api
+    const url = `${url_base}${pokeName}`
     console.log(url);
 
     useEffect(() => {
@@ -20,7 +22,7 @@ const Pokemon = (pokemonName) => {
             setLoading(false)
             setPokemon(data)
         } )
-        }, []);
+        }, [pokemonName, url]);
 
     return (
         <div>

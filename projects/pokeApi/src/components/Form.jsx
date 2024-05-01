@@ -7,7 +7,7 @@ const Form = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-
+        setPokemonName({pokemonName})
     }
 
     return (
